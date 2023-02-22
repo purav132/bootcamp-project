@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResetPwd</title>
+    <link rel="stylesheet" href="css/reset-pwd.css" />
+  </head>
+  <body>
+    <div class="login-form">
+      <form>
+        <h1>Reset Password</h1>
+        <div class="content">
+          <div class="input-field">
+            <p class="wrong-pwd-message">
+              Don't match the details! re-enter again.
+            </p>
+            <p class="popup-pwd-message">Please! Enter the Passward.</p>
+            <input
+              type="password"
+              id="pwd"
+              placeholder="New Password"
+              autocomplete="nope"
+            />
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="re-pwd"
+              placeholder="Re Enter New Password"
+              autocomplete="nope"
+            />
+          </div>
+          <label for="showPassword" class="checkbox-label">Show Password</label>
+          <input type="checkbox" id="showPassword" />
+          <!-- <div class="captchaBackground">
+            <canvas id="captcha">captcha</canvas>
+            <input type="text" id="captchaField">
+            <button id="refreshCaptcha">refresh</button><br><br><br>
+            <button id="validateCaptcha">Validate captcha</button><br> -->
+          <!-- <span id="output"></span><br><br>-->
+        </div>
+
+        <br />
+        <br />
+
+        <!-- <button class="ForgotPassword">Forgot Your Password?</button> -->
+        <div class="action">
+          <!-- <button id="Register">Register</button> -->
+          <button id="submit-button">Reset Password</button>
+        </div>
+      </form>
+    </div>
+    <div id="ForgotPasswordModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please enter your email address:</p>
+        <input type="text" id="emailInput" />
+        <button id="submitButtonModal">Submit</button>
+      </div>
+    </div>
+    <!-- partial -->
+    <script type="module" src="js/resetPwd.js"></script>
+  </body>
+</html>

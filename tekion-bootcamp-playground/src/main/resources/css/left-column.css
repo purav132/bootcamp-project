@@ -1,0 +1,71 @@
+.modal {
+  padding: 2em;
+  max-width: 75ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.5);
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+/* extra styling */
+
+form {
+  display: grid;
+  gap: 1.5em;
+}
+
+.close-button {
+  float: right;
+}
+
+.pwd-close-button {
+  float: right;
+}
+
+.popup-message {
+  color: red;
+  display: none;
+}
+
+.popup-pwd-message {
+  color: red;
+  display: none;
+}
+
+.wrong-pwd-message {
+  color: red;
+  display: none;
+}
+
+.update-pwd-modal {
+  padding: 1em;
+  max-width: 50ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+.update-pwd-modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.update-pic-modal {
+  padding: 1em;
+  max-width: 50ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+.update-pic-modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.pic-close-button {
+  float: right;
+}
+
+.popup-pic-message {
+  color: red;
+  display: none;
+}

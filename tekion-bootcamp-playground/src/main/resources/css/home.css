@@ -1,0 +1,22 @@
+#vis-modal {
+    border: 5px solid rosybrown;
+
+}
+.fr-second-toolbar {
+    display: none;
+}
+#example > div {
+    position: static;
+    width: 100%;   
+}
+.w3-bar {
+    box-shadow: none;
+}
+.w3-show {
+    display: block;
+}
+
+.block-post-content {
+    text-shadow: none;
+    box-shadow: none;
+}

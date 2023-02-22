@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-blue-grey.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/homeright.css" />
+    <!-- ‹link  href="../css/froala style.min.css" rel="stylesheet" type="text/css" /› -->
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="css/left-column.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body class="w3-theme-l5">
+    <!-- <div id=”example” contenteditable= true >/div> -->
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+          href="javascript:void(0);"
+          onclick="openNav()"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"
+          ><i class="fa fa-home w3-margin-right"></i>TEKION</a
+        >
+        <!--<a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          title="News"
+          id="mynotes"
+          ><i class="fa fa-user"></i>My Notes</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          title="Account Settings"
+          id="sharednotes"
+          ><i class="fa fa-globe">Shared Notes</i></a
+        > -->
+        <!--<a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+          title="Messages"
+          ><i class="fa fa-envelope"></i
+        ></a> -->
+        <!-- <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button w3-padding-large" title="Notifications">
+            <i class="fa fa-bell"></i
+            ><span class="w3-badge w3-right w3-small w3-green">3</span>
+          </button>
+          <div
+            class="w3-dropdown-content w3-card-4 w3-bar-block"
+            style="width: 300px"
+          >
+            <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+            <a href="#" class="w3-bar-item w3-button"
+              >John Doe posted on your wall</a
+            >
+            <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+          </div>
+        </div> -->
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+          title="My Account"
+        >
+          <img
+            src="images/avatar3.png"
+            class="w3-circle"
+            style="height: 23px; width: 23px"
+            alt="Avatar"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large"
+    >
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    </div>
+
+    <!-- Page Container -->
+    <div
+      class="w3-container w3-content"
+      style="max-width: 1400px; margin-top: 80px"
+    >
+      <!-- The Grid -->
+      <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+          <!-- Profile -->
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container">
+              <h4 class="w3-center">My Profile</h4>
+              <p class="w3-center">
+                <img
+                  src="images/profilePlaceholder.jpg"
+                  class="w3-circle"
+                  style="height: 106px; width: 106px"
+                  alt="Avatar"
+                />
+              </p>
+              <hr />
+              <p>
+                <i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>
+                <span class="full-name"> purav kansara </span>
+              </p>
+              <p>
+                <i
+                  class="fa fa-envelope fa-fw w3-margin-right w3-text-theme"
+                ></i>
+                purav123@gmail.com
+              </p>
+              <p>
+                <i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>
+                <button id="update-name-button">Update Name</button>
+              </p>
+              <p>
+                <i class="fa fa-key fa-fw w3-margin-right w3-text-theme"></i>
+                <button id="update-pwd-button">Update Passward</button>
+              </p>
+              <p>
+                <i class="fa fa-camera fa-fw w3-margin-right w3-text-theme"></i>
+                <button id="update-pic-button">Update Profile Picture</button>
+              </p>
+              <p>
+                <i
+                  class="fa fa-shield-cake fa-fw w3-margin-right w3-text-theme"
+                ></i>
+                <button id="logout-button">Logout</button>
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <!-- Accordion -->
+          <!-- <div class="w3-card w3-round">
+            <div class="w3-white"> -->
+          <!-- <button
+                onclick="myFunction('Demo1')"
+                class="w3-button w3-block w3-theme-l1 w3-left-align"
+              >
+                <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My
+                Groups
+              </button>
+              <div id="Demo1" class="w3-hide w3-container">
+                <p>Some text..</p>
+              </div>
+              <button
+                onclick="myFunction('Demo2')"
+                class="w3-button w3-block w3-theme-l1 w3-left-align"
+              >
+                <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My
+                Events
+              </button>
+              <div id="Demo2" class="w3-hide w3-container">
+                <p>Some other text..</p>
+              </div> -->
+          <button
+            onclick="myFunction('Demo3')"
+            class="w3-button w3-block w3-theme-l1 w3-left-align"
+          >
+            <i class="fa fa-users fa-fw w3-margin-right"></i> My Notes
+          </button>
+          <div id="Demo3" class="w3-hide w3-container">
+            <div class="w3-row-padding">
+              <br />
+              <div class="w3">
+                <h3>My First Note</h3>
+                <p>This is my first note. Thank You for viewing me.</p>
+              </div>
+              -----------------------------------------------------
+              <div class="w3">
+                <h3>My Second Note</h3>
+                <p>This is my first note. Thank You for viewing me.</p>
+              </div>
+              -----------------------------------------------------
+              <h3>My Third Note</h3>
+              <div class="w3-half">
+                <img
+                  src="images/avatar3.png"
+                  style="width: 100%"
+                  class="w3-margin-bottom"
+                />
+              </div>
+              <div class="w3-half">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, iusto.
+                </p>
+              </div>
+              <!--<div class="w3-half">
+                <img
+                  src="images/avatar3.png"
+                  style="width: 100%"
+                  class="w3-margin-bottom"
+                />
+              </div>
+              <div class="w3-half">
+                <img
+                  src="images/avatar3.png"
+                  style="width: 100%"
+                  class="w3-margin-bottom"
+                />
+              </div>
+              <div class="w3-half">
+                <img
+                  src="images/avatar3.png"
+                  style="width: 100%"
+                  class="w3-margin-bottom"
+                />
+              </div>-->
+            </div>
+          </div>
+          <!--
+            </div>
+          </div>
+          <br /> -->
+          <br />
+          <!-- Interests -->
+          <div class="w3-card w3-round w3-white w3-hide-small">
+            <div class="w3-container">
+              <p>Interests</p>
+              <p>
+                <span class="w3-tag w3-small w3-theme-d5">Sports</span>
+                <span class="w3-tag w3-small w3-theme-d4">Cricket</span>
+                <span class="w3-tag w3-small w3-theme-d3">Reading</span>
+                <span class="w3-tag w3-small w3-theme-d2">Games</span>
+                <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+                <!-- <span class="w3-tag w3-small w3-theme">Games</span> -->
+                <!-- <span class="w3-tag w3-small w3-theme-l1">Frien</span> -->
+                <span class="w3-tag w3-small w3-theme-l2">Food</span>
+                <span class="w3-tag w3-small w3-theme-l3">Travelling</span>
+                <span class="w3-tag w3-small w3-theme-l4">Art</span>
+                <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <!-- Alert Box -->
+          <div
+            class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small"
+          >
+            <span
+              onclick="this.parentElement.style.display='none'"
+              class="w3-button w3-theme-l3 w3-display-topright"
+            >
+              <i class="fa fa-remove"></i>
+            </span>
+            <p><strong>Hey!</strong></p>
+            <p>we are group 4. And this is my profile.</p>
+          </div>
+
+          <dialog class="modal">
+            <button class="close-button">✕</button>
+            <p class="popup-message">Please! Enter the name.</p>
+            <p>Enter new name:</p>
+            <form class="form">
+              <label>
+                First Name
+                <input class="first-name" type="text" />
+              </label>
+              <label> Last Name<input class="last-name" type="text" /> </label>
+              <button class="update-button">Update</button>
+            </form>
+          </dialog>
+
+          <dialog class="update-pwd-modal">
+            <button class="pwd-close-button">✕</button>
+            <p class="wrong-pwd-message">
+              Don't match the details! re-enter again.
+            </p>
+            <p class="popup-pwd-message">Please! Enter the Passward.</p>
+            <p>Create the new Passward:</p>
+            <form class="form">
+              <label>
+                New Passward
+                <input type="password" value="" id="pwd" /><br /><br />
+              </label>
+              <label>
+                Re-enter new Passward
+                <input type="password" value="" id="re-pwd" /><br /><br />
+              </label>
+              <input
+                class="check-box"
+                type="checkbox"
+                onclick="showPwd()"
+              />Show Password
+              <button class="update-pwd-button-modal">Update</button>
+            </form>
+          </dialog>
+
+          <dialog class="update-pic-modal">
+            <button class="pic-close-button">✕</button>
+            <p class="popup-pic-message">Please! Select the new image.</p>
+            <p>Select new image:</p>
+            <form class="form">
+              <input
+                type="file"
+                onchange="previewFile()"
+                id="files"
+                name="files[]"
+                multiple=""
+                required=""
+              />
+              <button class="update-pic-button-modal">Update</button>
+            </form>
+          </dialog>
+
+          <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m7">
+          <div class="w3-row-padding">
+            <div class="w3-col m12">
+              <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                  <!-- <h6 class="w3-opacity">Social Media template by w3.css</h6> -->
+                  <div
+                    contenteditable="true"
+                    id="example"
+                    class="w3-border w3-padding"
+                  >
+                    Enter Your Text
+                  </div>
+                  <button
+                    type="button"
+                    class="w3-button w3-theme"
+                    id="post-notes"
+                  >
+                    <i class="fa fa-pencil"></i>  Post
+                  </button>
+                  <button
+                    type="button"
+                    class="w3-button w3-theme"
+                    id="visibility-btn"
+                  >
+                    <i class="fa fa-pencil"></i>  Visibility Status
+                  </button>
+                  <dialog class="visibility-modal" id="vis-modal">
+                    <form method="dialog">
+                      <input type="password" id="pass-word" value="" /><br />
+                      <label for="pass-word">Type Your Password</label><br />
+                      <input
+                        type="submit"
+                        id="password-submit"
+                        value="submit"
+                      />
+                    </form>
+                  </dialog>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parent-notes">
+            <div
+              class="w3-container w3-card w3-white w3-round w3-margin"
+              id="post-block"
+            >
+              <br />
+              <img
+                src="images/profilePlaceholder.jpg"
+                alt="Avatar"
+                class="w3-left w3-circle w3-margin-right"
+                style="width: 60px"
+              />
+              <span class="w3-right w3-opacity">1 min</span>
+              <h4>Purav Kansara</h4>
+              <br />
+              <hr class="w3-clear" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="w3-row-padding" style="margin: 0 -16px">
+                <div class="w3-half">
+                  <img
+                    src="images/avatar3.png"
+                    style="width: 100%"
+                    alt="Northern Lights"
+                    class="w3-margin-bottom"
+                  />
+                </div>
+                <div class="w3-half">
+                  <img
+                    src="images/avatar3.png"
+                    style="width: 100%"
+                    alt="Nature"
+                    class="w3-margin-bottom"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="w3-button w3-theme-d1 w3-margin-bottom"
+              >
+                <i class="fa fa-thumbs-up"></i>  UpVote
+              </button>
+              <button
+                type="button"
+                class="w3-button w3-theme-d2 w3-margin-bottom"
+              >
+                <i class="fa fa-thumbs-down"></i>  DownVote
+              </button>
+            </div>
+          </div>
+
+          <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-col m2">
+          <!--<div class="w3-card w3-round w3-white w3-center">
+            <div class="w3-container">
+              <p>View Private Note</p>
+              <input type="number" placeholder="Enter PIN" />
+              <p>
+                <button class="w3-button w3-block w3-theme-l4 show-modal">
+                  View
+                </button>
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="rightmodal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>Private Note</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="overlay hidden"></div> -->
+
+          <div
+            class="w3-card w3-round w3-white w3-center"
+            style="padding-bottom: 15px"
+          >
+            <div class="w3-container">
+              <p>CSV Import</p>
+              <div class="w3-row w3-opacity">
+                <!--<div class="w3-half">-->
+                <input type="button" id="btnFileUpload" value="Select File" />
+                <span id="spnFilePath"></span>
+                <input type="file" id="FileUpload1" style="display: none" />
+                <script type="text/javascript">
+                  window.onload = function () {
+                    var fileupload = document.getElementById("FileUpload1");
+                    var filePath = document.getElementById("spnFilePath");
+                    var button = document.getElementById("btnFileUpload");
+                    button.onclick = function () {
+                      fileupload.click();
+                    };
+                    fileupload.onchange = function () {
+                      var fileName =
+                        fileupload.value.split("\\")[
+                          fileupload.value.split("\\").length - 1
+                        ];
+                      filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+                    };
+                  };
+                </script>
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div
+            class="w3-card w3-round w3-white w3-center"
+            style="padding-bottom: 15px"
+          >
+            <div class="w3-container">
+              <p>CSV Export</p>
+              <div class="w3-row w3-opacity">
+                <button id="export-btn">Export</button>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+            <p>Your Earnings:</p>
+            <p>₹ 18,000</p>
+          </div>
+          <br />
+
+          <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+    <br />
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d3 w3-padding-16">
+      <h5>Footer</h5>
+    </footer>
+
+    <footer class="w3-container w3-theme-d5">
+      <!--<p>
+        Powered by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >w3.css</a
+        >
+      </p>-->
+    </footer>
+    <script async src="js/leftColumn.js"></script>
+    <script async src="js/homeright.js"></script>
+    <script>
+      // Accordion
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+          x.className = x.className.replace("w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+      }
+
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
